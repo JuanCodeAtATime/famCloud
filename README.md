@@ -1,2 +1,1 @@
-# famCloud
-Mern Stack, travel-themed family album
+# MERN_eCommerce_app
