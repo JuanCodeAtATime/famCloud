@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import { Typography, Button, Form, message, Input, Icon } from 'antd';
 import FileUpload from '../../utils/FileUpload'
 import Axios from 'axios';
-import Complete from "./Autocomplete";
+import Countrylist from "./CountriesList"
+
 
 const { Title } = Typography;
 const { TextArea } = Input;
@@ -99,7 +100,7 @@ function UploadProductPage(props) {
                 <br />
                 <br />
                 <label>Country</label>
-                <Complete
+                <Countrylist
                     onChange={onTitleChange}
                     type="text"
                     value={TitleValue}
@@ -142,3 +143,5 @@ function UploadProductPage(props) {
 }
 
 export default UploadProductPage
+
+
