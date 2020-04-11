@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Typography, Button, Form, message, Input, Icon } from 'antd';
 import FileUpload from '../../utils/FileUpload'
 import Axios from 'axios';
+import Complete from "./Autocomplete";
 
 const { Title } = Typography;
 const { TextArea } = Input;
@@ -97,9 +98,10 @@ function UploadProductPage(props) {
 
                 <br />
                 <br />
-                <label>Title</label>
-                <Input
+                <label>Country</label>
+                <Complete
                     onChange={onTitleChange}
+                    type="text"
                     value={TitleValue}
                 />
                 <br />
@@ -111,9 +113,10 @@ function UploadProductPage(props) {
                 />
                 <br />
                 <br />
-                <label>Price($)</label>
+                <label>Year</label>
                 <Input
                     onChange={onPriceChange}
+                    placeholder="Enter four digit year"
                     value={PriceValue}
                     type="number"
                 />

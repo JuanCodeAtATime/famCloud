@@ -79,7 +79,13 @@ function LoginPage(props) {
           handleReset,
         } = props;
         return (
-          <div className="app">
+          <div className="app" style={{
+            backgroundColor: "rgba(255, 255, 255, 0.85)",
+            paddingLeft: "40x",
+            paddingRight: "40px",
+            borderRadius: "10px",
+            margin: "0px 45px 45px 45px"
+          }}>
 
             <Title level={2}>Log In</Title>
             <form onSubmit={handleSubmit} style={{ width: '350px' }}>

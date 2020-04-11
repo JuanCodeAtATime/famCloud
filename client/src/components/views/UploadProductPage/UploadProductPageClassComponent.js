@@ -107,9 +107,10 @@ export class UploadProductPage extends Component {
                         value={this.state.description}
                     />
                     <br /><br />
-                    <label>Price($)</label>
+                    <label>Year</label>
                     <Input
                         type="number"
+                        placeholder="Enter four digit year"
                         onChange={this.handleChangePrice}
                         value={this.state.price}
                     />
