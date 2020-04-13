@@ -13,14 +13,15 @@ export class Autocomplete extends Component {
     };
 
     onChange = (e) => {
-        console.log('onChanges');
+
 
         const { options } = this.props;
         const userInput = e.currentTarget.value;
+        console.log("here's the user input +  innner text " + userInput)
 
         const filteredOptions = options.filter(
             (optionName) =>
-                optionName.toLowerCase().indexOf(userInput.toLowerCase()) > -1
+                optionName.toLowerCase().indexOf(userInput.toLowerCase()) > -1,
         );
 
         this.setState({
@@ -36,8 +37,10 @@ export class Autocomplete extends Component {
             activeOption: 0,
             filteredOptions: [],
             showOptions: false,
-            userInput: e.currentTarget.innerText
-        });
+            userInput: e.currentTarget.innerText,
+
+        }, console.log(e.currentTarget.innerText)
+        );
     };
     onKeyDown = (e) => {
         const { activeOption, filteredOptions } = this.state;

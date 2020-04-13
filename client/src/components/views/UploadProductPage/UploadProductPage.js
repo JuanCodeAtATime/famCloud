@@ -22,17 +22,21 @@ const Continents = [
 
 function UploadProductPage(props) {
 
-    const [TitleValue, setTitleValue] = useState("")
+    // const [TitleValue, setTitleValue] = useState("")
+    // const [options, setOptions] = useState([])
     const [DescriptionValue, setDescriptionValue] = useState("")
     const [PriceValue, setPriceValue] = useState(0)
     const [ContinentValue, setContinentValue] = useState(1)
-
     const [Images, setImages] = useState([])
 
+    var title;
 
-    const onTitleChange = (event) => {
-        setTitleValue(event.currentTarget.value)
-    }
+    // const updateOptions = event => {
+    //     setOptions(event.currentTarget.innerText);
+    // }
+
+    // const updateCountry = (e) => { setTitleValue(e.currentTarget.innerText) };
+
 
     const onDescriptionChange = (event) => {
         setDescriptionValue(event.currentTarget.value)
@@ -53,14 +57,14 @@ function UploadProductPage(props) {
         event.preventDefault();
 
 
-        if (!TitleValue || !DescriptionValue || !PriceValue ||
+        if (!DescriptionValue || !PriceValue ||
             !ContinentValue || !Images) {
             return alert('fill all the fields first!')
         }
 
         const variables = {
             writer: props.user.userData._id,
-            title: TitleValue,
+            title,
             description: DescriptionValue,
             price: PriceValue,
             images: Images,
@@ -70,7 +74,7 @@ function UploadProductPage(props) {
         Axios.post('/api/product/uploadProduct', variables)
             .then(response => {
                 if (response.data.success) {
-                    alert('Product Successfully Uploaded')
+                    alert('Product Successfully Uploaded.  The Country is ' + variables.title)
                     props.history.push('/')
                 } else {
                     alert('Failed to upload Product')
@@ -92,20 +96,16 @@ function UploadProductPage(props) {
             </div>
 
 
-            <Form onSubmit={onSubmit} >
-
+            <Form onSubmit={onSubmit}>
                 {/* DropZone */}
                 <FileUpload refreshFunction={updateImages} />
-
                 <br />
                 <br />
-                <label>Country</label>
+                <label>Title </label>
                 <Countrylist
-                    onChange={onTitleChange}
-                    type="text"
-                    value={TitleValue}
+                    value={(e) => title = e.currentTarget.innerText}
                 />
-                <br />
+
                 <br />
                 <label>Description</label>
                 <TextArea
