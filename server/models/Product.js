@@ -7,8 +7,8 @@ const productSchema = mongoose.Schema({
         ref: 'User'
     },
     title: {
-        type: String,
-        maxlength: 50
+        type: Array,
+        default: ""
     },
     description: {
         type: String
@@ -37,8 +37,8 @@ const productSchema = mongoose.Schema({
 }, { timestamps: true })
 
 
-productSchema.index({ 
-    title:'text',
+productSchema.index({
+    title: 'text',
     description: 'text',
 }, {
     weights: {

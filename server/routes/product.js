@@ -44,6 +44,7 @@ router.post("/uploadProduct", auth, (req, res) => {
 
     //save all the data we got from the client into the DB 
     const product = new Product(req.body)
+    console.log(req.body)
 
     product.save((err) => {
         if (err) returnres.status(400).json({ success: false, err })

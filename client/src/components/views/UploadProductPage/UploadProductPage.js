@@ -1,4 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import ReactDOM from "react-dom";
+import Location from "../../Locations";
 import { Typography, Button, Form, message, Input, Icon } from 'antd';
 import FileUpload from '../../utils/FileUpload'
 import Axios from 'axios';
@@ -21,22 +23,15 @@ const Continents = [
 
 
 function UploadProductPage(props) {
-
-    // const [TitleValue, setTitleValue] = useState("")
-    // const [options, setOptions] = useState([])
+    const [TitleValue, setTitleValue] = useState("")
     const [DescriptionValue, setDescriptionValue] = useState("")
     const [PriceValue, setPriceValue] = useState(0)
     const [ContinentValue, setContinentValue] = useState(1)
     const [Images, setImages] = useState([])
 
-    var title;
-
-    // const updateOptions = event => {
-    //     setOptions(event.currentTarget.innerText);
-    // }
-
-    // const updateCountry = (e) => { setTitleValue(e.currentTarget.innerText) };
-
+    const onTitleChange = (event) => {
+        setTitleValue(event.currentTarget.innerText)
+    }
 
     const onDescriptionChange = (event) => {
         setDescriptionValue(event.currentTarget.value)
@@ -53,6 +48,8 @@ function UploadProductPage(props) {
     const updateImages = (newImages) => {
         setImages(newImages)
     }
+
+
     const onSubmit = (event) => {
         event.preventDefault();
 
@@ -64,7 +61,7 @@ function UploadProductPage(props) {
 
         const variables = {
             writer: props.user.userData._id,
-            title,
+            title: TitleValue,
             description: DescriptionValue,
             price: PriceValue,
             images: Images,
@@ -74,7 +71,7 @@ function UploadProductPage(props) {
         Axios.post('/api/product/uploadProduct', variables)
             .then(response => {
                 if (response.data.success) {
-                    alert('Product Successfully Uploaded.  The Country is ' + variables.title)
+                    alert('Product Successfully Uploaded.  The Country is ' + variables.price)
                     props.history.push('/')
                 } else {
                     alert('Failed to upload Product')
@@ -101,9 +98,11 @@ function UploadProductPage(props) {
                 <FileUpload refreshFunction={updateImages} />
                 <br />
                 <br />
-                <label>Title </label>
+                <label>Country </label>
+
                 <Countrylist
-                    value={(e) => title = e.currentTarget.innerText}
+                    onChange={onTitleChange}
+                    value={TitleValue}
                 />
 
                 <br />

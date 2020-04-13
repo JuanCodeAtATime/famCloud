@@ -109,7 +109,7 @@ export class Autocomplete extends Component {
                         onKeyDown={onKeyDown}
                         value={userInput}
                     />
-                    <input type="submit" value="" className="search-btn" />
+                    <input type="submit" className="search-btn" />
                 </div>
                 {optionList}
             </React.Fragment>
