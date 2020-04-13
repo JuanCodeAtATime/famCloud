@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from "react";
-import { useLocations } from "../../hooks/locations";
+import { useLocations } from "../hooks/locations.js"
 import { Container, Input, Options, Option } from "./styles";
 
 const Location = ({ value, onChange, placeholder }) => {

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import ReactDOM from "react-dom";
+// import ReactDOM from "react-dom";
 import Location from "../../Locations";
 import { Typography, Button, Form, message, Input, Icon } from 'antd';
 import FileUpload from '../../utils/FileUpload'
 import Axios from 'axios';
-import Countrylist from "./CountriesList"
+// import Countrylist from "./CountriesList"
 
 
 const { Title } = Typography;
@@ -23,15 +23,12 @@ const Continents = [
 
 
 function UploadProductPage(props) {
-    const [TitleValue, setTitleValue] = useState("")
+    const [origin, setOrigin] = useState({});
     const [DescriptionValue, setDescriptionValue] = useState("")
     const [PriceValue, setPriceValue] = useState(0)
     const [ContinentValue, setContinentValue] = useState(1)
     const [Images, setImages] = useState([])
 
-    const onTitleChange = (event) => {
-        setTitleValue(event.currentTarget.innerText)
-    }
 
     const onDescriptionChange = (event) => {
         setDescriptionValue(event.currentTarget.value)
@@ -61,7 +58,7 @@ function UploadProductPage(props) {
 
         const variables = {
             writer: props.user.userData._id,
-            title: TitleValue,
+            title: origin,
             description: DescriptionValue,
             price: PriceValue,
             images: Images,
@@ -71,7 +68,7 @@ function UploadProductPage(props) {
         Axios.post('/api/product/uploadProduct', variables)
             .then(response => {
                 if (response.data.success) {
-                    alert('Product Successfully Uploaded.  The Country is ' + variables.price)
+                    alert('Product Successfully Uploaded.  The Country is ' + variables.title.name)
                     props.history.push('/')
                 } else {
                     alert('Failed to upload Product')
@@ -99,12 +96,7 @@ function UploadProductPage(props) {
                 <br />
                 <br />
                 <label>Country </label>
-
-                <Countrylist
-                    onChange={onTitleChange}
-                    value={TitleValue}
-                />
-
+                <Location value={origin} onChange={setOrigin} placeholder="Enter Country" />
                 <br />
                 <label>Description</label>
                 <TextArea

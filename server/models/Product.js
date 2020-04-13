@@ -7,8 +7,8 @@ const productSchema = mongoose.Schema({
         ref: 'User'
     },
     title: {
-        type: Array,
-        default: ""
+        type: Object,
+        default: {}
     },
     description: {
         type: String
