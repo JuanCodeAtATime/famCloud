@@ -7,7 +7,7 @@ export const Input = styled.input`
 	height: 25px;
 	padding: 10px 15px;;
 	margin: 5px 0px;
-	border-radius: 6px;
+	border-radius: 3px;
 	border: none;
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 
@@ -22,7 +22,7 @@ export const Options = styled.div`
 	max-height: 200px;
 	overflow: scroll;
 	width: 220px;
-	border-radius: 4px;
+	border-radius: 3px;
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 	margin-top: -5px;
 	z-index: 2;

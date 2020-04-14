@@ -4,7 +4,7 @@ import { Col, Card, Row } from 'antd';
 import ImageSlider from '../../utils/ImageSlider';
 import CheckBox from './Sections/CheckBox';
 import RadioBox from './Sections/RadioBox';
-import { continents, price } from './Sections/Datas';
+import { continents, year } from './Sections/Datas';
 import SearchFeature from './Sections/SearchFeature';
 
 const { Meta } = Card;
@@ -19,7 +19,7 @@ function LandingPage() {
 
     const [Filters, setFilters] = useState({
         continents: [],
-        price: []
+        year: []
     })
 
     useEffect(() => {
@@ -72,7 +72,7 @@ function LandingPage() {
             >
                 <Meta
                     title={product.title.name}
-                    description={`Year: ${product.price}`}
+                    description={`Year: ${product.year}`}
                 />
             </Card>
         </Col>
@@ -92,13 +92,13 @@ function LandingPage() {
 
     }
 
-    const handlePrice = (value) => {
-        const data = price;
+    const handleYear = (value) => {
+        const data = year;
         let array = [];
 
         for (let key in data) {
 
-            if (data[key]._id === parseInt(value, 10)) {
+            if (data[key]._id === parseInt(value)) {
                 array = data[key].array;
             }
         }
@@ -112,9 +112,9 @@ function LandingPage() {
 
         newFilters[category] = filters
 
-        if (category === "price") {
-            let priceValues = handlePrice(filters)
-            newFilters[category] = priceValues
+        if (category === "year") {
+            let yearValues = handleYear(filters)
+            newFilters[category] = yearValues
 
         }
 
@@ -169,8 +169,8 @@ function LandingPage() {
                     </Col>
                     <Col lg={12} xs={24}>
                         <RadioBox
-                            list={price}
-                            handleFilters={filters => handleFilters(filters, "price")}
+                            list={year}
+                            handleFilters={filters => handleFilters(filters, "year")}
                         />
                     </Col>
                 </Row>

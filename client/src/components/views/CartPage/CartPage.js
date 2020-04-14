@@ -43,7 +43,7 @@ function CartPage(props) {
         let total = 0;
 
         cartDetail.map(item => {
-            total += parseInt(item.price, 10) * item.quantity
+            total += parseInt(item.year, 10) * item.quantity
         });
 
         setTotal(total)

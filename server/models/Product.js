@@ -13,7 +13,7 @@ const productSchema = mongoose.Schema({
     description: {
         type: String
     },
-    price: {
+    year: {
         type: Number,
         default: 0
     },

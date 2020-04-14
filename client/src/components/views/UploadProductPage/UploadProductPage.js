@@ -25,7 +25,7 @@ const Continents = [
 function UploadProductPage(props) {
     const [origin, setOrigin] = useState({});
     const [DescriptionValue, setDescriptionValue] = useState("")
-    const [PriceValue, setPriceValue] = useState(0)
+    const [Year, setYear] = useState(0)
     const [ContinentValue, setContinentValue] = useState(1)
     const [Images, setImages] = useState([])
 
@@ -34,8 +34,8 @@ function UploadProductPage(props) {
         setDescriptionValue(event.currentTarget.value)
     }
 
-    const onPriceChange = (event) => {
-        setPriceValue(event.currentTarget.value)
+    const onYearChange = (event) => {
+        setYear(event.currentTarget.value)
     }
 
     const onContinentsSelectChange = (event) => {
@@ -51,7 +51,7 @@ function UploadProductPage(props) {
         event.preventDefault();
 
 
-        if (!DescriptionValue || !PriceValue ||
+        if (!DescriptionValue || !Year ||
             !ContinentValue || !Images) {
             return alert('fill all the fields first!')
         }
@@ -60,7 +60,7 @@ function UploadProductPage(props) {
             writer: props.user.userData._id,
             title: origin,
             description: DescriptionValue,
-            price: PriceValue,
+            year: Year,
             images: Images,
             continents: ContinentValue,
         }
@@ -107,9 +107,9 @@ function UploadProductPage(props) {
                 <br />
                 <label>Year</label>
                 <Input
-                    onChange={onPriceChange}
+                    onChange={onYearChange}
                     placeholder="Enter four digit year"
-                    value={PriceValue}
+                    value={Year}
                     type="number"
                 />
                 <br /><br />

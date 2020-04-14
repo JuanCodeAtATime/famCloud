@@ -58,16 +58,22 @@
   padding: 6px;
   margin-top: 8px;
   display: none !important; /* use of important to overwrite ant-btn */
-  background: #3e91f7;
+  background: transparent;
+}
+
+.menu_drawer {
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .menu_drawer .ant-drawer-body {
   padding: 0 !important;
+  background-color: rgba(255, 255, 255, 0.5) !important;
 }
 
 /* align header of Drawer with header of page */
 .menu_drawer .ant-drawer-header {
   padding: 14px 24px !important;
+  background-color: rgba(255, 255, 255, 0.5) !important;
 }
 
 @media (max-width: 767px) {

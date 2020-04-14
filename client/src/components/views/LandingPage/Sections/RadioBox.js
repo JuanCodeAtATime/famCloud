@@ -24,7 +24,7 @@ function RadioBox(props) {
                 backgroundColor: "transparent",
                 borderRadius: "10px"
             }}>
-                <Panel header="price" key="1">
+                <Panel header="Year" key="0">
                     <Radio.Group onChange={handleChange} value={Value}>
 
                         {renderRadioBox()}

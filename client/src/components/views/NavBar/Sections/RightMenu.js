@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import { Menu, Icon, Badge } from 'antd';
+import { UploadOutlined } from '@ant-design/icons';
 import axios from 'axios';
 import { USER_SERVER } from '../../../Config';
 import { withRouter } from 'react-router-dom';
@@ -34,12 +35,14 @@ function RightMenu(props) {
     return (
       <Menu mode={props.mode}>
 
-        <Menu.Item key="history">
+        {/* <Menu.Item key="history">
           <a href="/history">History</a>
-        </Menu.Item>
+        </Menu.Item> */}
 
         <Menu.Item key="upload">
-          <a href="/product/upload">Upload</a>
+          <a href="/product/upload">
+            <UploadOutlined style={{ fontSize: 30, marginBottom: 3, color: 'white' }} />
+          </a>
         </Menu.Item>
 
         <Menu.Item key="cart" style={{ paddingBottom: 3 }}>

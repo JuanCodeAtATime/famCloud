@@ -23,15 +23,15 @@ export class UploadProductPage extends Component {
         description: '',
         continents: 1,
         images: [],
-        price: 0
+        year: 0
     }
 
     handleChangeTitle = (event) => {
         this.setState({ title: event.currentTarget.value })
     }
 
-    handleChangePrice = (event) => {
-        this.setState({ price: parseInt(event.currentTarget.value, 10) })
+    handleChangeYear = (event) => {
+        this.setState({ year: parseInt(event.currentTarget.value, 10) })
     }
 
     handleChangeDecsription = (event) => {
@@ -52,7 +52,7 @@ export class UploadProductPage extends Component {
 
         if (!this.state.title || !this.state.description ||
             !this.state.continents || !this.state.images
-            || !this.state.price) {
+            || !this.state.year) {
             return alert('Please first fill all the fields')
         }
 
@@ -62,7 +62,7 @@ export class UploadProductPage extends Component {
             description: this.state.description,
             images: this.state.images,
             continents: this.state.continents,
-            price: this.state.price
+            year: this.state.year
         }
 
         axios.post('/api/product/uploadProduct', variables)
@@ -111,8 +111,8 @@ export class UploadProductPage extends Component {
                     <Input
                         type="number"
                         placeholder="Enter four digit year"
-                        onChange={this.handleChangePrice}
-                        value={this.state.price}
+                        onChange={this.handleChangeYear}
+                        value={this.state.year}
                     />
                     <br /><br />
                     <select onChange={this.handleChangeContinents}>
