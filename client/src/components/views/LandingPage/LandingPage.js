@@ -141,21 +141,24 @@ function LandingPage() {
 
 
     return (
-        <div style={{ margin: '10rem auto' }}>
+        <div>
             <div style={{ textAlign: 'center' }}>
 
                 <h2 style={{
                     color: "#1890ff",
-                    backgroundColor: "rgba(255, 255, 255, 0.95)",
+                    backgroundColor: "rgba(255, 255, 255, 0.35)",
                     display: "inline-block",
                     fontSize: "4rem",
+                    WebkitTextStrokeColor: "white",
+                    WebkitTextStrokeWidth: "1px",
+                    marginTop: "8rem",
                     paddingLeft: "13px",
                     paddingRight: "13px",
                     borderRadius: "10px"
-                }}>fam<span style={{ color: "darkgrey" }}>cloud</span></h2>
+                }}><b>fam<span style={{ color: "white" }}>cloud</span></b></h2>
             </div>
 
-            <div style={{ width: '75%', margin: '3rem auto', marginTop: "100px" }}>
+            <div style={{ width: '75%', margin: '3rem auto', marginTop: "50px" }}>
 
 
                 {/* Filter  */}

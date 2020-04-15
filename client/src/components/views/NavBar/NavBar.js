@@ -18,7 +18,13 @@ function NavBar() {
   return (
     <nav className="menu" style={{ position: 'fixed', zIndex: 5, width: '100%' }}>
       <div className="menu__logo">
-        <a href="/"><b>fam<span style={{ color: "lightgray" }}>cloud</span></b></a>
+        <a href="/">
+          <b style={{
+            backgroundColor: "rgba(255, 255, 255, 0.35)",
+            borderRadius: "5px",
+            padding: "5px"
+          }}>fam<span style={{ color: "white" }}>cloud</span></b>
+        </a>
       </div>
       <div className="menu__container">
         <div className="menu_left">

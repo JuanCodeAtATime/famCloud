@@ -41,11 +41,11 @@ function RightMenu(props) {
 
         <Menu.Item key="upload">
           <a href="/product/upload">
-            <UploadOutlined style={{ fontSize: 30, marginBottom: 3, color: 'white' }} />
+            <UploadOutlined style={{ fontSize: 30, marginBottom: 3, color: '#1890ff' }} />
           </a>
         </Menu.Item>
 
-        <Menu.Item key="cart" style={{ paddingBottom: 3 }}>
+        <Menu.Item key="cart" style={{ paddingBottom: 3, color: '#1890ff' }}>
           <Badge count={user.userData && user.userData.cart.length}>
             <a href="/user/cart" style={{ marginRight: -22, color: '#667777' }}>
               <Icon type="shopping-cart" style={{ fontSize: 30, marginBottom: 3 }} />

@@ -4,16 +4,17 @@
   padding: 0 20px; 
   overflow: auto;
   background-color: transparent;
-  color:white !important;
+  color:#1890ff !important;
+  font-weight: bold !important;
  
 }
 
 .ant-menu, .ant-menu-light, .ant-menu-root, .ant-menu-horizontal {
   background-color: transparent;
-  color:white !important;
+  color:#1890ff !important;
 }
 
-.leftMenu, .rightMenu { background-color: transparent;  color:white !important; }
+.leftMenu, .rightMenu { background-color: transparent;  color:#1890ff !important; }
 
 .menu__logo {
   width: 150px;
@@ -37,7 +38,7 @@
 .menu__container .ant-menu-item a,
 .menu__container .ant-menu-submenu-title a {
   padding: 10px 15px;
-  color:white !important;
+  color:#1890ff !important;
 }
 
 .menu__container .ant-menu-horizontal {
@@ -58,7 +59,7 @@
   padding: 6px;
   margin-top: 8px;
   display: none !important; /* use of important to overwrite ant-btn */
-  background: transparent;
+  background: '#1890ff';
 }
 
 .menu_drawer {
