@@ -99,7 +99,7 @@ function RegisterPage(props) {
         return (
           <div className="app" style={{
             backgroundColor: "rgba(255, 255, 255, 0.85)",
-            paddingLeft: "40x",
+            paddingLeft: "40px",
             paddingRight: "40px",
             borderRadius: "10px",
             margin: "0px 45px 45px 45px"
@@ -111,7 +111,7 @@ function RegisterPage(props) {
 
             }} {...formItemLayout} onSubmit={handleSubmit} >
 
-              <Form.Item required label="Name">
+              <Form.Item required label="Name" >
                 <Input
                   id="name"
                   placeholder="Enter your name"

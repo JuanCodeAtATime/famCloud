@@ -81,7 +81,7 @@ function LoginPage(props) {
         return (
           <div className="app" style={{
             backgroundColor: "rgba(255, 255, 255, 0.85)",
-            paddingLeft: "40x",
+            paddingLeft: "40px",
             paddingRight: "40px",
             borderRadius: "10px",
             margin: "0px 45px 45px 45px"
