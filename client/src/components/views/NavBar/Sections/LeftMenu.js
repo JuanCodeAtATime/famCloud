@@ -1,5 +1,9 @@
 import React from 'react';
 import { Menu } from 'antd';
+import { HomeOutlined } from '@ant-design/icons';
+
+
+
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
 
@@ -7,7 +11,15 @@ function LeftMenu(props) {
   return (
     <Menu mode={props.mode} className="leftMenu">
       <Menu.Item key="mail">
-        <a href="/">Home</a>
+
+        <a href="/">
+          <HomeOutlined style={{
+            fontSize: 25,
+            fontWeight: 'bold',
+            color: '#1890ff'
+          }} />
+
+        </a>
       </Menu.Item>
       <SubMenu title={<span>Blogs</span>}>
         <MenuItemGroup title="Item 1">

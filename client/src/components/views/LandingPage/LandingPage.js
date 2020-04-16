@@ -151,7 +151,7 @@ function LandingPage() {
                     fontSize: "4rem",
                     WebkitTextStrokeColor: "white",
                     WebkitTextStrokeWidth: "1px",
-                    marginTop: "8rem",
+                    marginTop: "7.5rem",
                     paddingLeft: "13px",
                     paddingRight: "13px",
                     borderRadius: "10px"

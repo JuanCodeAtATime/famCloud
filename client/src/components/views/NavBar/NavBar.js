@@ -20,7 +20,8 @@ function NavBar() {
       <div className="menu__logo">
         <a href="/">
           <b style={{
-            backgroundColor: "rgba(255, 255, 255, 0.35)",
+            backgroundColor: "black",
+            border: "solid white 0.5px",
             borderRadius: "5px",
             padding: "5px"
           }}>fam<span style={{ color: "white" }}>cloud</span></b>

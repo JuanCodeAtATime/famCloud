@@ -59,7 +59,8 @@
   padding: 6px;
   margin-top: 8px;
   display: none !important; /* use of important to overwrite ant-btn */
-  background: '#1890ff';
+  background: black;
+  border: solid white 0.5px !important;
 }
 
 .menu_drawer {

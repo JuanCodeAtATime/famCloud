@@ -97,16 +97,14 @@ function RegisterPage(props) {
           handleReset,
         } = props;
         return (
-          <div className="app" style={{
-            backgroundColor: "rgba(255, 255, 255, 0.85)",
-            paddingLeft: "40px",
-            paddingRight: "40px",
-            borderRadius: "10px",
-            margin: "0px 45px 45px 45px"
-          }}>
+          <div className="app">
             <h2>Sign up</h2>
             <Form style={{
               minWidth: '375px,',
+              backgroundColor: "rgba(255, 255, 255, 0.85)",
+              padding: "40px",
+              borderRadius: "10px",
+              margin: "0px 45px 45px 45px"
 
 
             }} {...formItemLayout} onSubmit={handleSubmit} >

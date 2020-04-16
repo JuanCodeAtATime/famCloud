@@ -92,7 +92,7 @@ span.ant-descriptions-item-content {
 
 /* Year Radio Box Properties  */
   div.ant-collapse-content, div.ant-collapse-content-active {
-  background-color: rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.45);
   color: white !important;
   font-weight: 500;
 
@@ -102,15 +102,17 @@ span.ant-descriptions-item-content {
     background-color: rgba(255, 255, 255, 0.25);
   } 
 
+  /* Card properties */
+  div.ant-card-body{
+    background-color: rgba(255, 255, 255, 0.25) !important;
+    padding: 10px;
+  }
+
+  div.ant-card {background-color: rgba(255, 255, 255, 0.25) !important;}
 
 
 /* All below this field is auto-complete styling */
-/* 
-.search { 
-  margin: 10rem auto 2rem auto;
-  text-align: right;
-  position: relative;
-} */
+
 .search-box {
   border: 4px solid transparent;
   border-radius: 3px; 
