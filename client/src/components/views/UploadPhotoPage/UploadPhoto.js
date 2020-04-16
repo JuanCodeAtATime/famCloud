@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
-// import ReactDOM from "react-dom";
 import Location from "../../Locations";
 import { Typography, Button, Form, message, Input, Icon } from 'antd';
 import FileUpload from '../../utils/FileUpload'
 import Axios from 'axios';
-// import Countrylist from "./CountriesList"
 
 
 const { Title } = Typography;
@@ -22,7 +20,7 @@ const Continents = [
 
 
 
-function UploadProductPage(props) {
+function UploadPhoto(props) {
     const [origin, setOrigin] = useState({});
     const [DescriptionValue, setDescriptionValue] = useState("")
     const [Year, setYear] = useState(0)
@@ -65,13 +63,13 @@ function UploadProductPage(props) {
             continents: ContinentValue,
         }
 
-        Axios.post('/api/product/uploadProduct', variables)
+        Axios.post('/api/photo/uploadPhoto', variables)
             .then(response => {
                 if (response.data.success) {
-                    alert('Product Successfully Uploaded.  The Country is ' + variables.title.name)
+                    alert(variables.title.name + " photo successfully uploaded.")
                     props.history.push('/')
                 } else {
-                    alert('Failed to upload Product')
+                    alert('Sorry.  Failed to upload photo')
                 }
             })
 
@@ -133,6 +131,6 @@ function UploadProductPage(props) {
     )
 }
 
-export default UploadProductPage
+export default UploadPhoto
 
 

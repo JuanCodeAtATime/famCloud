@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { Product } = require("../models/Product");
+const { Photo } = require("../models/Photo");
 const multer = require('multer');
 
 const { auth } = require("../middleware/auth");
@@ -25,7 +25,7 @@ var upload = multer({ storage: storage }).single("file")
 
 
 //=================================
-//             Product
+//             Photo
 //=================================
 
 router.post("/uploadImage", auth, (req, res) => {
@@ -40,13 +40,13 @@ router.post("/uploadImage", auth, (req, res) => {
 });
 
 
-router.post("/uploadProduct", auth, (req, res) => {
+router.post("/uploadPhoto", auth, (req, res) => {
 
-    //save all the data we got from the client into the DB 
-    const product = new Product(req.body)
+    //save client datat into DB 
+    const photo = new Photo(req.body)
     console.log(req.body)
 
-    product.save((err) => {
+    photo.save((err) => {
         if (err) returnres.status(400).json({ success: false, err })
         return res.status(200).json({ success: true })
     })
@@ -54,7 +54,7 @@ router.post("/uploadProduct", auth, (req, res) => {
 });
 
 
-router.post("/getProducts", (req, res) => {
+router.post("/getPhoto", (req, res) => {
 
     let order = req.body.order ? req.body.order : "desc";
     let sortBy = req.body.sortBy ? req.body.sortBy : "_id";
@@ -80,51 +80,51 @@ router.post("/getProducts", (req, res) => {
     console.log(findArgs)
 
     if (term) {
-        Product.find(findArgs)
+        Photo.find(findArgs)
             .find({ $text: { $search: term } })
             .populate("writer")
             .sort([[sortBy, order]])
             .skip(skip)
             .limit(limit)
-            .exec((err, products) => {
+            .exec((err, photos) => {
                 if (err) return res.status(400).json({ success: false, err })
-                res.status(200).json({ success: true, products, postSize: products.length })
+                res.status(200).json({ success: true, photos, postSize: photos.length })
             })
     } else {
-        Product.find(findArgs)
+        Photo.find(findArgs)
             .populate("writer")
             .sort([[sortBy, order]])
             .skip(skip)
             .limit(limit)
-            .exec((err, products) => {
+            .exec((err, photos) => {
                 if (err) return res.status(400).json({ success: false, err })
-                res.status(200).json({ success: true, products, postSize: products.length })
+                res.status(200).json({ success: true, photos, postSize: photos.length })
             })
     }
 
 });
 
 
-//?id=${productId}&type=single
+//?id=${photoId}&type=single
 //id=12121212,121212,1212121   type=array 
-router.get("/products_by_id", (req, res) => {
+router.get("/photos_by_id", (req, res) => {
     let type = req.query.type
-    let productIds = req.query.id
+    let photoIds = req.query.id
 
     if (type === "array") {
         let ids = req.query.id.split(',');
-        productIds = [];
-        productIds = ids.map(item => {
+        photoIds = [];
+        photoIds = ids.map(item => {
             return item
         })
     }
 
-    //we need to find the product information that belong to product Id 
-    Product.find({ '_id': { $in: productIds } })
+    //Find photo info that belongs to photo Id 
+    Photo.find({ '_id': { $in: photoIds } })
         .populate('writer')
-        .exec((err, product) => {
+        .exec((err, photo) => {
             if (err) return req.status(400).send(err)
-            return res.status(200).send(product)
+            return res.status(200).send(photo)
         })
 });
 

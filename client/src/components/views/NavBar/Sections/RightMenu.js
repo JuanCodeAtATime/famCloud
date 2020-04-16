@@ -29,7 +29,7 @@ function RightMenu(props) {
         <Menu.Item key="mail">
           <a href="/login">
             <UserOutlined style={{
-              fontSize: 25,
+              fontSize: "1.75rem",
               fontWeight: 'bold',
               marginBottom: 3,
               color: '#1890ff'
@@ -46,8 +46,8 @@ function RightMenu(props) {
       <Menu mode={props.mode}>
 
         <Menu.Item key="upload">
-          <a href="/product/upload">
-            <UploadOutlined style={{ fontSize: 25, marginBottom: 3, color: '#1890ff' }} />
+          <a href="/photo/upload">
+            <UploadOutlined style={{ fontSize: "1.75rem", marginBottom: 3, color: '#1890ff' }} />
           </a>
         </Menu.Item>
 

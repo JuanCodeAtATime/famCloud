@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import ImageGallery from 'react-image-gallery';
 
 
-function ProductImage(props) {
+function PhotoImage(props) {
     const [Images, setImages] = useState([])
 
     useEffect(() => {
@@ -26,4 +26,4 @@ function ProductImage(props) {
     )
 }
 
-export default ProductImage
+export default PhotoImage

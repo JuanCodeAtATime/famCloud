@@ -5,8 +5,7 @@
   overflow: auto;
   background-color: transparent;
   color:#1890ff !important;
-  font-weight: bold !important;
- 
+  font-weight: bold !important; 
 }
 
 .ant-menu, .ant-menu-light, .ant-menu-root, .ant-menu-horizontal {
@@ -59,7 +58,7 @@
   padding: 6px;
   margin-top: 8px;
   display: none !important; /* use of important to overwrite ant-btn */
-  background: black;
+  background-color: rgba(24,144,255, 0.75);
   border: solid white 0.5px !important;
 }
 

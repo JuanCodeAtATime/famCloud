@@ -3,10 +3,6 @@ import { Checkbox, Collapse } from 'antd';
 
 
 
-
-
-
-
 const { Panel } = Collapse
 
 
@@ -49,7 +45,7 @@ function CheckBox(props) {
 
 
             }}>
-                <Panel header="Continents" key="1">
+                <Panel header="Search By Continent" key="1">
                     {renderCheckboxLists()}
                 </Panel>
             </Collapse>

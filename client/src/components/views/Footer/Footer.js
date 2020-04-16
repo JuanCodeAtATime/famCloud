@@ -14,8 +14,18 @@ function Footer() {
                 paddingLeft: "10px",
                 paddingRight: "10px",
                 marginBottom: "5px"
+            }}>
 
-            }}> fam<span style={{ color: "white" }}>cloud</span></b>
+                fam<span style={{ color: "white" }}>cloud </span>
+
+                <span style={{ fontSize: ".75rem" }}>
+                    <a style={{ textDecoration: "None" }} href="https://juancodeatatime.github.io/myPortfolio/">
+                        By Juan Rivera
+            </a>
+                </span>
+
+            </b>
+
         </div>
     )
 }

@@ -5,17 +5,20 @@ import ImageSlider from '../../utils/ImageSlider';
 import CheckBox from './Sections/CheckBox';
 import RadioBox from './Sections/RadioBox';
 import { continents, year } from './Sections/Datas';
-import SearchFeature from './Sections/SearchFeature';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlaneDeparture } from '@fortawesome/free-solid-svg-icons';
+import { auto } from 'async';
+// import SearchFeature from './Sections/SearchFeature';
 
 const { Meta } = Card;
 
 function LandingPage() {
 
-    const [Products, setProducts] = useState([])
+    const [Photos, setPhotos] = useState([])
     const [Skip, setSkip] = useState(0)
     const [Limit, setLimit] = useState(8)
     const [PostSize, setPostSize] = useState()
-    const [SearchTerms, setSearchTerms] = useState("")
+    // const [SearchTerms, setSearchTerms] = useState("")
 
     const [Filters, setFilters] = useState({
         continents: [],
@@ -29,22 +32,22 @@ function LandingPage() {
             limit: Limit,
         }
 
-        getProducts(variables)
+        getPhotos(variables)
 
     }, [])
 
-    const getProducts = (variables) => {
-        Axios.post('/api/product/getProducts', variables)
+    const getPhotos = (variables) => {
+        Axios.post('/api/photo/getPhoto', variables)
             .then(response => {
                 if (response.data.success) {
                     if (variables.loadMore) {
-                        setProducts([...Products, ...response.data.products])
+                        setPhotos([...Photos, ...response.data.photos])
                     } else {
-                        setProducts(response.data.products)
+                        setPhotos(response.data.photos)
                     }
                     setPostSize(response.data.postSize)
                 } else {
-                    alert('Failed to fectch product datas')
+                    alert('Failed to fetch photo data')
                 }
             })
     }
@@ -58,21 +61,21 @@ function LandingPage() {
             loadMore: true
 
         }
-        getProducts(variables)
+        getPhotos(variables)
         setSkip(skip)
     }
 
 
-    const renderCards = Products.map((product, index) => {
+    const renderCards = Photos.map((photo, index) => {
 
         return <Col lg={6} md={8} xs={24}>
             <Card
                 hoverable={true}
-                cover={<a href={`/product/${product._id}`} > <ImageSlider images={product.images} /></a>}
+                cover={<a href={`/photo/${photo._id}`} > <ImageSlider images={photo.images} /></a>}
             >
                 <Meta
-                    title={product.title.name}
-                    description={`Year: ${product.year}`}
+                    title={photo.title.name}
+                    description={`Year: ${photo.year}`}
                 />
             </Card>
         </Col>
@@ -87,7 +90,7 @@ function LandingPage() {
             filters: filters
 
         }
-        getProducts(variables)
+        getPhotos(variables)
         setSkip(0)
 
     }
@@ -124,20 +127,20 @@ function LandingPage() {
         setFilters(newFilters)
     }
 
-    const updateSearchTerms = (newSearchTerm) => {
+    // const updateSearchTerms = (newSearchTerm) => {
 
-        const variables = {
-            skip: 0,
-            limit: Limit,
-            filters: Filters,
-            searchTerm: newSearchTerm
-        }
+    //     const variables = {
+    //         skip: 0,
+    //         limit: Limit,
+    //         filters: Filters,
+    //         searchTerm: newSearchTerm
+    //     }
 
-        setSkip(0)
-        setSearchTerms(newSearchTerm)
+    //     setSkip(0)
+    //     setSearchTerms(newSearchTerm)
 
-        getProducts(variables)
-    }
+    //     getPhotos(variables)
+    // }
 
 
     return (
@@ -146,16 +149,17 @@ function LandingPage() {
 
                 <h2 style={{
                     color: "#1890ff",
-                    backgroundColor: "rgba(255, 255, 255, 0.35)",
+                    backgroundColor: "rgba(255, 255, 255, 0.75)",
                     display: "inline-block",
+                    lineHeight: "auto",
                     fontSize: "4rem",
                     WebkitTextStrokeColor: "white",
                     WebkitTextStrokeWidth: "1px",
                     marginTop: "7.5rem",
-                    paddingLeft: "13px",
-                    paddingRight: "13px",
+                    paddingLeft: "15px",
+                    paddingRight: "15px",
                     borderRadius: "10px"
-                }}><b>fam<span style={{ color: "white" }}>cloud</span></b></h2>
+                }}><b>fam<span style={{ color: "grey" }}>cloud</span></b></h2>
             </div>
 
             <div style={{ width: '75%', margin: '3rem auto', marginTop: "50px" }}>
@@ -180,18 +184,26 @@ function LandingPage() {
 
 
                 {/* Search  */}
-                <div style={{ display: 'flex', justifyContent: 'flex-end', margin: '1rem auto' }}>
+                {/* <div style={{ display: 'flex', justifyContent: 'flex-end', margin: '1rem auto' }}>
 
                     <SearchFeature
                         refreshFunction={updateSearchTerms}
                     />
 
-                </div>
+                </div> */}
 
 
-                {Products.length === 0 ?
-                    <div style={{ display: 'flex', height: '300px', justifyContent: 'center', alignItems: 'center' }}>
-                        <h2>No post yet...</h2>
+                {Photos.length === 0 ?
+                    <div style={{ height: '300px', justifyContent: 'center', alignItems: 'center' }}>
+                        <h2 style={{ color: "white" }}>No Photos To Show (yet...
+                            {'\u00A0'}
+                            <FontAwesomeIcon
+                                icon={faPlaneDeparture}
+                                style={{ color: "white", fontSize: "1.5rem" }}
+                            />
+
+                            {'\u00A0'}).
+                        </h2>
                     </div> :
                     <div>
                         <Row gutter={[16, 16]}>
