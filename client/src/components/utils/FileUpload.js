@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Dropzone from 'react-dropzone';
-import { Icon } from 'antd';
+// import { Icon } from 'antd';
+import { CloudUploadOutlined } from '@ant-design/icons'
 import Axios from 'axios';
 function FileUpload(props) {
 
@@ -50,12 +51,12 @@ function FileUpload(props) {
                         style={{
                             width: '300px', height: '240px', border: '1px solid lightgray',
                             display: 'flex', alignItems: 'center', justifyContent: 'center',
-                            backgroundColor: "rgba(1,1,1,0.5)", borderRadius: "10px"
+                            backgroundColor: "rgba(1,1,1,0.3)", borderRadius: "10px"
                         }}
                         {...getRootProps()}
                     >
                         <input {...getInputProps()} />
-                        <Icon type="plus" style={{ fontSize: '3rem', cursor: "pointer" }} />
+                        <CloudUploadOutlined style={{ fontSize: '5rem', cursor: "pointer" }} />
 
                     </div>
                 )}
@@ -65,7 +66,7 @@ function FileUpload(props) {
 
                 {Images.map((image, index) => (
                     <div onClick={() => onDelete(image)}>
-                        <img style={{ minWidth: '300px', width: '300px', height: '240px' }} src={`http://localhost:5000/${image}`} alt={`photoImg-${index}`} />
+                        <img style={{ minWidth: '300px', width: '300px', height: '240px' }} src={`https://famcloud.herokuapp.com/${image}`} alt={`photoImg-${index}`} />
                     </div>
                 ))}
 

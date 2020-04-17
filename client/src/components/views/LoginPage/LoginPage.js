@@ -82,15 +82,15 @@ function LoginPage(props) {
           <div className="app"
           >
 
-            <Title level={2}>Log In</Title>
+
             <form onSubmit={handleSubmit} style={{
               width: '350px',
               backgroundColor: "rgba(255, 255, 255, 0.85)",
-              padding: "40px",
+              padding: "20px 40px 40px 40px",
               borderRadius: "10px",
               margin: "0px 45px 45px 45px"
             }}>
-
+              <Title level={2}>Log In</Title>
               <Form.Item required>
                 <Input
                   id="email"

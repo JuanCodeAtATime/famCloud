@@ -1,9 +1,9 @@
 @import '~antd/dist/antd.css';
 
 .menu {
-  padding: 0 20px; 
+  padding: 0 20 10 20px; 
   overflow: auto;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.90);
   color:#1890ff !important;
   font-weight: bold !important; 
 }
@@ -11,6 +11,17 @@
 .ant-menu, .ant-menu-light, .ant-menu-root, .ant-menu-horizontal {
   background-color: transparent;
   color:#1890ff !important;
+}
+
+h5.famcloudLogo {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #1890ff;
+  background-color: black;
+  padding: 7px;
+  border-radius: 5px;
+  /* padding-top: 1px; */
+  line-height: .8;
 }
 
 .leftMenu, .rightMenu { background-color: transparent;  color:#1890ff !important; }
@@ -56,7 +67,7 @@
   float: right;
   height: 32px;
   padding: 6px;
-  margin-top: 8px;
+  margin: 5px 5px 5px auto;  
   display: none !important; /* use of important to overwrite ant-btn */
   background-color: rgba(24,144,255, 0.75);
   border: solid white 0.5px !important;

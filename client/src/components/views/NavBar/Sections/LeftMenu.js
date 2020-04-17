@@ -14,11 +14,11 @@ function LeftMenu(props) {
 
         <a href="/">
           <HomeOutlined style={{
-            fontSize: "1.75rem",
+            fontSize: "1.3rem",
             fontWeight: 'bold',
             color: '#1890ff'
           }} />
-
+          Home
         </a>
       </Menu.Item>
       {/* <SubMenu title={<span>Blogs</span>}>

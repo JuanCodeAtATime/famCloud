@@ -98,21 +98,22 @@ function RegisterPage(props) {
         } = props;
         return (
           <div className="app">
-            <h2>Sign up</h2>
+
             <Form style={{
               minWidth: '375px,',
               backgroundColor: "rgba(255, 255, 255, 0.85)",
-              padding: "40px",
+              padding: "20px 40px 40px 40px",
               borderRadius: "10px",
               margin: "0px 45px 45px 45px"
 
 
             }} {...formItemLayout} onSubmit={handleSubmit} >
-
-              <Form.Item required label="Name" >
+              <h2>Sign up for <span style={{ color: "#1890ff" }}>famcloud</span></h2>
+              <br></br>
+              <Form.Item required label="First Name" >
                 <Input
                   id="name"
-                  placeholder="Enter your name"
+                  placeholder="Enter your First name"
                   type="text"
                   value={values.name}
                   onChange={handleChange}

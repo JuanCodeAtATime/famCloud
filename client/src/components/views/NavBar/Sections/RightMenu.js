@@ -3,8 +3,7 @@ import React from 'react';
 import { Menu } from 'antd';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDoorOpen } from '@fortawesome/free-solid-svg-icons';
-import { UploadOutlined } from '@ant-design/icons';
-import { UserOutlined } from '@ant-design/icons';
+import { CloudUploadOutlined, UserAddOutlined, UserOutlined } from '@ant-design/icons';
 import axios from 'axios';
 import { USER_SERVER } from '../../../Config';
 import { withRouter } from 'react-router-dom';
@@ -29,16 +28,27 @@ function RightMenu(props) {
         <Menu.Item key="mail">
           <a href="/login">
             <UserOutlined style={{
-              fontSize: "1.75rem",
+              fontSize: "1.25rem",
               fontWeight: 'bold',
               marginBottom: 3,
               color: '#1890ff'
             }} />
+            Login
           </a>
         </Menu.Item>
-        {/* <Menu.Item key="app">
-          <a href="/register">Signup</a>
-        </Menu.Item> */}
+        <Menu.Item key="app">
+          <a href="/register">
+            <UserAddOutlined style={{
+              fontSize: "1.30rem",
+              fontWeight: 'bold',
+              marginBottom: 3,
+              color: '#1890ff'
+            }} />
+
+
+
+            Signup</a>
+        </Menu.Item>
       </Menu>
     )
   } else {
@@ -47,7 +57,13 @@ function RightMenu(props) {
 
         <Menu.Item key="upload">
           <a href="/photo/upload">
-            <UploadOutlined style={{ fontSize: "1.75rem", marginBottom: 3, color: '#1890ff' }} />
+            <CloudUploadOutlined style={{
+              fontSize: "1.50rem",
+              color: '#1890ff',
+              cursor: "pointer"
+            }} />
+            {/* {'\u00A0'} */}
+            Upload
           </a>
         </Menu.Item>
 
@@ -56,8 +72,10 @@ function RightMenu(props) {
           <a onClick={logoutHandler}>
             <FontAwesomeIcon
               icon={faDoorOpen}
-              style={{ color: "1890ff", fontSize: "22px", cursor: "pointer" }}
+              style={{ color: "1890ff", fontSize: "1.25rem", cursor: "pointer" }}
             />
+            {'\u00A0'}
+             Logout
 
 
           </a>
