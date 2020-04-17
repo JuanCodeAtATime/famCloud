@@ -6,7 +6,7 @@ const cors = require('cors')
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 
-const db = require("./config/dev").mongoURI;
+const db = require("./config/key").mongoURI;
 
 const mongoose = require("mongoose");
 mongoose
