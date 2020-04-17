@@ -6,6 +6,8 @@ const cors = require('cors')
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 
+require("dotenv").config();
+
 const db = require("./config/key").mongoURI;
 
 const mongoose = require("mongoose");
