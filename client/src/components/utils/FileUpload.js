@@ -66,7 +66,7 @@ function FileUpload(props) {
 
                 {Images.map((image, index) => (
                     <div onClick={() => onDelete(image)}>
-                        <img style={{ minWidth: '300px', width: '300px', height: '240px' }} src={`https://famcloud.herokuapp.com/${image}`} alt={`photoImg-${index}`} />
+                        <img style={{ minWidth: '300px', width: '300px', height: '240px' }} src={require(`http://localhost:5000/${image}`)} alt={`photoImg-${index}`} />
                     </div>
                 ))}
 
