@@ -29,6 +29,9 @@ function FileUpload(props) {
     }
 
 
+    let localhost = "http://localhost:5000/";
+
+
     const onDelete = (image) => {
         const currentIndex = Images.indexOf(image);
 
@@ -40,6 +43,9 @@ function FileUpload(props) {
     }
 
     return (
+
+
+
         <div style={{ display: 'flex', justifyContent: 'space-between' }}>
             <Dropzone
                 onDrop={onDrop}
@@ -61,12 +67,13 @@ function FileUpload(props) {
                     </div>
                 )}
             </Dropzone>
-
             <div style={{ display: 'flex', width: '350px', height: '240px', overflowX: 'scroll' }}>
 
                 {Images.map((image, index) => (
+
                     <div onClick={() => onDelete(image)}>
-                        <img style={{ minWidth: '300px', width: '300px', height: '240px' }} src={require(`http://localhost:5000/${image}`)} alt={`photoImg-${index}`} />
+
+                        <img style={{ minWidth: '300px', width: '300px', height: '240px' }} src={require(localhost + `${image}`)} alt={`photoImg-${index}`} />
                     </div>
                 ))}
 
