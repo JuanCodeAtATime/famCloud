@@ -41,9 +41,7 @@ function CheckBox(props) {
     return (
         <div>
             <Collapse defaultActiveKey={['0']} style={{
-                backgroundColor: "transparent",
-
-
+                backgroundColor: "transparent"
             }}>
                 <Panel header="Search By Continent" key="1">
                     {renderCheckboxLists()}

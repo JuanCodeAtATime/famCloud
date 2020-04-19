@@ -49,7 +49,7 @@ function UploadPhoto(props) {
         event.preventDefault();
 
 
-        if (!DescriptionValue || !Year ||
+        if (!origin || !DescriptionValue || !Year ||
             !ContinentValue || !Images) {
             return alert('fill all the fields first!')
         }

@@ -149,7 +149,7 @@ function LandingPage() {
 
                 <h2 style={{
                     color: "#1890ff",
-                    backgroundColor: "rgba(255, 255, 255, 0.75)",
+                    backgroundColor: "transparent",
                     display: "inline-block",
                     lineHeight: "auto",
                     fontSize: "4rem",
@@ -158,8 +158,9 @@ function LandingPage() {
                     marginTop: "7.5rem",
                     paddingLeft: "15px",
                     paddingRight: "15px",
-                    borderRadius: "10px"
-                }}><b>fam<span style={{ color: "grey" }}>cloud</span></b></h2>
+                    borderRadius: "10px",
+                    border: "solid white 1.5px"
+                }}><b>fam<span style={{ color: "white" }}>cloud</span></b></h2>
             </div>
 
             <div style={{ width: '75%', margin: '3rem auto', marginTop: "50px" }}>

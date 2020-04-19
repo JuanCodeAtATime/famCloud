@@ -2,7 +2,11 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 const path = require("path");
-const cors = require('cors')
+const cors = require('cors');
+
+// const fs = require("fs");
+// const https = require("https");
+
 
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
@@ -39,13 +43,32 @@ if (process.env.NODE_ENV === "production") {
   // Set static folder
   app.use(express.static("client/build"));
 
+
   // index.html for all page routes
   app.get("*", (req, res) => {
+
     res.sendFile(path.resolve(__dirname, "../client", "build", "index.html"));
   });
 }
 
+// const options = {
+//   hostname: "juanCodes",
+//   cert: fs.readFileSync(path.join(__dirname, 'ssl', 'server.crt')),
+//   key: fs.readFileSync(path.join(__dirname, 'ssl', 'server.key'))
+// }
+
+
+
 const port = process.env.PORT || 5000
+
+
+
+// https.createServer(options, (req, res) => {
+//   res.writeHead(200);
+//   res.end("hello world")
+// }).listen(port)
+
+
 
 app.listen(port, () => {
   console.log(`Server Running at ${port}`)

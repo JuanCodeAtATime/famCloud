@@ -21,8 +21,7 @@ function RadioBox(props) {
     return (
         <div>
             <Collapse defaultActiveKey={['0']} style={{
-                backgroundColor: "transparent",
-                borderRadius: "10px"
+                backgroundColor: "transparent"
             }}>
                 <Panel header="Search By Year" key="0">
                     <Radio.Group onChange={handleChange} value={Value}>

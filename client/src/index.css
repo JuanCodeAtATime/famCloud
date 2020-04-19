@@ -65,8 +65,12 @@ tr:nth-child(even) {
 div.ant-collapse > .ant-collapse-item > .ant-collapse-header {
   color: #fff;
   font-weight: bold;
-  background-color: rgba(255, 255, 255, 0.25);
-  border-radius: 10px;
+  /* background-color: rgba(255, 255, 255, 0.25); */
+ 
+}
+
+div.ant-collapse-content-box {
+  border-radius: 5%;
 }
 
 /* landing page Continents checkbox labels  */
