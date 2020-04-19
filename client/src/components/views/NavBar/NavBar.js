@@ -17,17 +17,15 @@ function NavBar() {
 
   return (
     <nav className="menu" style={{ position: 'fixed', zIndex: 5, width: '100%' }}>
-      {/* <div className="menu__logo">
-        <a href="/">
-          <b style={{
-            backgroundColor: "black",
-            border: "solid white 0.5px",
-            borderRadius: "5px",
-            padding: "5px"
-          }}>fam<span style={{ color: "white" }}>cloud</span></b>
-        </a>
-      </div> */}
+
       <div className="menu__container">
+        <div className="menu__logo ml-auto d-none d-lg-none" style={{ display: "inline-block" }}>
+          <a href="/">
+            <b style={{
+              padding: "5px"
+            }}>fam<span style={{ color: "white" }}>cloud</span></b>
+          </a>
+        </div>
         <div className="menu_left">
           <LeftMenu mode="horizontal" />
         </div>

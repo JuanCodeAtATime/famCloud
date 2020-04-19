@@ -10,7 +10,7 @@ import { HomeOutlined } from '@ant-design/icons';
 function LeftMenu(props) {
   return (
     <Menu mode={props.mode} className="leftMenu">
-      <Menu.Item key="mail">
+      {/* <Menu.Item key="mail">
 
         <a href="/">
           <HomeOutlined style={{
@@ -20,7 +20,7 @@ function LeftMenu(props) {
           }} />
           Home
         </a>
-      </Menu.Item>
+      </Menu.Item> */}
       {/* <SubMenu title={<span>Blogs</span>}>
         <MenuItemGroup title="Item 1">
           <Menu.Item key="setting:1">Option 1</Menu.Item>

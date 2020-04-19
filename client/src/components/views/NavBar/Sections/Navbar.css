@@ -3,7 +3,7 @@
 .menu {
   padding: 0 20 10 20px; 
   overflow: auto;
-  background-color: rgba(255, 255, 255, 0.90);
+  background-color: rgba(0, 0, 0, 0.90);
   color:#1890ff !important;
   font-weight: bold !important; 
 }
@@ -13,28 +13,18 @@
   color:#1890ff !important;
 }
 
-h5.famcloudLogo {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #1890ff;
-  background-color: black;
-  padding: 7px;
-  border-radius: 5px;
-  /* padding-top: 1px; */
-  line-height: .8;
-}
 
 .leftMenu, .rightMenu { background-color: transparent;  color:#1890ff !important; }
 
-.menu__logo {
-  width: 150px;
-  float: left;
-}
+
 
 .menu__logo a {
-  display: inline-block;
-  font-size: 20px;
-  padding: 19px 20px;
+  font-size: 1.5rem;
+  padding:  auto;
+  display: block;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  padding-top: 10px;
 }
 
 .menu__container .ant-menu-item {
@@ -98,9 +88,7 @@ h5.famcloudLogo {
     display: none;
   }
 
-  .menu__logo a {
-    margin-left: -20px;
-  }
+ 
 
   .menu__container .ant-menu-item,
   .menu__container .ant-menu-submenu-title {
@@ -108,6 +96,6 @@ h5.famcloudLogo {
   }
 
   .menu__logo a {
-    padding: 10px 20px;
+    padding: 2px;
   }
 }
