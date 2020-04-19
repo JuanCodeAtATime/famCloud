@@ -1,7 +1,7 @@
 ## famcloud | *Photo Storage App for Traveling Friends & Fam*
-- ```Developer: Juan Rivera```
-- ```Date: April 19, 2020```
-- ```(Still Under Development)```
+- Developer: Juan Rivera
+- Date: April 19, 2020
+- (Still Under Development; see Developer's notes)
 
 
  ![famcloud, photo-storage app for traveling fam and friends](client/public/screenshot.PNG)
@@ -12,8 +12,7 @@
 
 **famcloud** is a full-stack MERN app featuring a travel-themed user interface and photo storage. 
 
-Users can take photos and store them by continent, country, and year.  On the landing page, users can then search for photos by continent and year.  
-
+Users can take photos and store them by continent, country, and year.  Users can then search for photos the site's photo gallery located on the landing page.  
 
 
 ### TECHNICAL DETAILS
@@ -25,7 +24,7 @@ Users can take photos and store them by continent, country, and year.  On the la
 
 ### ISSUES (Developer's Notes)
 
-The photo rendring and storage functionality is disabled on the Heroku deployed site.  I'm currently working to resolve this issue.  
+The photo rendering and storage functionality is disabled on the Heroku deployed site.  I'm currently working to resolve this issue.  
 
 *****
 
