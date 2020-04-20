@@ -24,11 +24,11 @@ Users can take photos and store them by continent, country, and year.  The landi
 
 ### ISSUES (Developer's Notes)
 
-The has no issues when running locally.  However, photo rendering and storage functionality is intermittenly throwing "Failed to load resource: net::ERR_CONNECTION_REFUSE" on some devices on the Heroku deployed site.  I'm currently working to resolve this issue.  
+This app has no issues when running locally.  However, photo rendering and storage functionality is intermittenly throwing "Failed to load resource: net::ERR_CONNECTION_REFUSE" on some devices on the Heroku deployed site.  I'm currently working to resolve this issue.  
 
 *****
 
-### CHECK OUT THE DEPLOYED SITE
+### CHECK OUT THE DEPLOYED SITE HERE
 https://famcloud.herokuapp.com
 
 
