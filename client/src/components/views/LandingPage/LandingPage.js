@@ -7,8 +7,8 @@ import RadioBox from './Sections/RadioBox';
 import { continents, year } from './Sections/Datas';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlaneDeparture } from '@fortawesome/free-solid-svg-icons';
-import { auto } from 'async';
-// import SearchFeature from './Sections/SearchFeature';
+import { SearchOutlined } from '@ant-design/icons';
+
 
 const { Meta } = Card;
 
@@ -127,61 +127,75 @@ function LandingPage() {
         setFilters(newFilters)
     }
 
-    // const updateSearchTerms = (newSearchTerm) => {
-
-    //     const variables = {
-    //         skip: 0,
-    //         limit: Limit,
-    //         filters: Filters,
-    //         searchTerm: newSearchTerm
-    //     }
-
-    //     setSkip(0)
-    //     setSearchTerms(newSearchTerm)
-
-    //     getPhotos(variables)
-    // }
 
 
     return (
         <div>
-            <div style={{ textAlign: 'center' }}>
+            <div style={{
+                textAlign: 'center',
+                // border: "solid white 2.5px",
+                width: "70%",
+                margin: "auto",
+                borderRadius: "10px",
+                alignContent: "center",
+                alignContent: 'center'
+            }}>
 
                 <h2 style={{
                     color: "#1890ff",
                     backgroundColor: "transparent",
-                    display: "inline-block",
+                    display: "block",
                     lineHeight: "auto",
                     fontSize: "4rem",
                     WebkitTextStrokeColor: "white",
                     WebkitTextStrokeWidth: "1px",
-                    marginTop: "7.5rem",
+                    marginTop: "2rem",
+                    marginBottom: "0",
                     paddingLeft: "15px",
                     paddingRight: "15px",
-                    borderRadius: "10px",
-                    border: "solid white 1.5px"
+                    borderRadius: "10px"
+
                 }}><b>fam<span style={{ color: "white" }}>cloud</span></b></h2>
+                <div style={{
+                    marginBottom: "0.5rem",
+                    alignContent: "center",
+                    alignContent: 'center'
+
+                }}>
+                    <Row gutter={[10]} style={{ padding: "5px" }}>
+                        <Col lg={0.5} xs={0.5} style={{ float: "left", marginRight: "1px" }} >
+                            <SearchOutlined style={{
+                                fontSize: "3.0rem",
+                                fontWeight: 'bold',
+                                color: '#fff',
+                                marginTop: ".15rem",
+                                marginLeft: ".5rem"
+                            }} />
+                        </Col>
+
+
+                        <Col lg={10} xs={9} style={{ margin: "auto" }} >
+                            <CheckBox
+                                list={continents}
+                                handleFilters={filters => handleFilters(filters, "continents")}
+                            />
+                        </Col>
+                        <Col lg={10} xs={9} style={{ margin: "auto" }} >
+                            <RadioBox
+                                list={year}
+                                handleFilters={filters => handleFilters(filters, "year")}
+                            />
+                        </Col>
+                    </Row>
+                </div>
             </div>
 
-            <div style={{ width: '75%', margin: '3rem auto', marginTop: "50px" }}>
+            <div style={{ width: '75%', margin: '3rem auto', marginTop: "90px" }}>
 
 
                 {/* Filter  */}
 
-                <Row gutter={[16, 16]}>
-                    <Col lg={12} xs={24} >
-                        <CheckBox
-                            list={continents}
-                            handleFilters={filters => handleFilters(filters, "continents")}
-                        />
-                    </Col>
-                    <Col lg={12} xs={24}>
-                        <RadioBox
-                            list={year}
-                            handleFilters={filters => handleFilters(filters, "year")}
-                        />
-                    </Col>
-                </Row>
+
 
 
                 {/* Search  */}

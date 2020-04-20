@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Location from "../../Locations";
-import { Typography, Button, Form, message, Input, Icon } from 'antd';
+import { Typography, Button, Form, Input } from 'antd';
 import FileUpload from '../../utils/FileUpload'
 import Axios from 'axios';
 
@@ -18,6 +18,15 @@ const Continents = [
     { key: 7, value: "Antarctica" }
 ]
 
+//Create new variable to handle years options, ex. 
+// const Year = [
+//     { key: 0, value: "Anytime" },
+//     { key: 1, value: "2010" },
+//     { key: 2, value: "2011" },
+//     { key: 3, value: "2012" },
+//     { key: 4, value: "2013" },
+//     { key: 5, value: "2014" },   
+// ]
 
 
 function UploadPhoto(props) {

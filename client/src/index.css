@@ -65,7 +65,10 @@ tr:nth-child(even) {
 div.ant-collapse > .ant-collapse-item > .ant-collapse-header {
   color: #fff;
   font-weight: bold;
-  /* background-color: rgba(255, 255, 255, 0.25); */
+  font-size: .95rem;
+  padding-right: 2px;
+  background-color: rgba(24,144,255, 0.5);
+
  
 }
 
@@ -104,8 +107,17 @@ span.ant-descriptions-item-content {
   background-color: rgba(255, 255, 255, 0.45);
   color: white !important;
   font-weight: 500;
-
+  
   }
+
+  /* div.ant-collapse-content-active {
+    background-color: rgba(255, 255, 255, 0.25);
+    display: inline-block;
+    vertical-align: bottom;    
+    word-wrap: break-word;
+    grid-template-columns: 3;
+    grid-template-rows: 3;
+  } */
 
   span.ant-radio-inner {    
     background-color: rgba(255, 255, 255, 0.25);
@@ -159,6 +171,10 @@ span.ant-descriptions-item-content {
 .search-btn:focus {
   outline: none;
   opacity: 0.6;
+}
+
+div.filterBoxes {
+  background-color: brown;
 }
 
 ul.options {

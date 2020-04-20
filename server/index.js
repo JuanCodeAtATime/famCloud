@@ -51,23 +51,7 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
-// const options = {
-//   hostname: "juanCodes",
-//   cert: fs.readFileSync(path.join(__dirname, 'ssl', 'server.crt')),
-//   key: fs.readFileSync(path.join(__dirname, 'ssl', 'server.key'))
-// }
-
-
-
 const port = process.env.PORT || 5000
-
-
-
-// https.createServer(options, (req, res) => {
-//   res.writeHead(200);
-//   res.end("hello world")
-// }).listen(port)
-
 
 
 app.listen(port, () => {
