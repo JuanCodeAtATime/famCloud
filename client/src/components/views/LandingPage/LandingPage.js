@@ -134,7 +134,7 @@ function LandingPage() {
             <div style={{
                 textAlign: 'center',
                 // border: "solid white 2.5px",
-                width: "70%",
+                width: "80%",
                 margin: "auto",
                 borderRadius: "10px",
                 alignContent: "center",
@@ -162,25 +162,26 @@ function LandingPage() {
                     alignContent: 'center'
 
                 }}>
-                    <Row gutter={[10]} style={{ padding: "5px" }}>
-                        <Col lg={0.5} xs={0.5} style={{ float: "left", marginRight: "1px" }} >
+                    <Row gutter={[13]} style={{ padding: "5px" }} className={"clearfix"}>
+                        <Col lg={2} xs={1} style={{ marginRight: ".075px", marginLeft: "1.0rem" }} >
                             <SearchOutlined style={{
                                 fontSize: "3.0rem",
+                                float: "right",
                                 fontWeight: 'bold',
                                 color: '#fff',
-                                marginTop: ".15rem",
-                                marginLeft: ".5rem"
+                                marginTop: ".15rem"
+
                             }} />
                         </Col>
 
 
-                        <Col lg={10} xs={9} style={{ margin: "auto" }} >
+                        <Col lg={10} s={8} xs={12} style={{ marginLeft: "auto", float: "left" }} >
                             <CheckBox
                                 list={continents}
                                 handleFilters={filters => handleFilters(filters, "continents")}
                             />
                         </Col>
-                        <Col lg={10} xs={9} style={{ margin: "auto" }} >
+                        <Col lg={10} s={8} xs={8} style={{ marginRight: "auto", float: "left" }} >
                             <RadioBox
                                 list={year}
                                 handleFilters={filters => handleFilters(filters, "year")}
