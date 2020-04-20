@@ -67,7 +67,7 @@ router.post("/getPhoto", (req, res) => {
     for (let key in req.body.filters) {
 
         if (req.body.filters[key].length > 0) {
-            if (key === "year") {
+            if (key === "year" || "continents") {
                 findArgs[key] = {
                     $eq: req.body.filters[key][0]
                 }

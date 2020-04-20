@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Axios from 'axios';
 import { Col, Card, Row } from 'antd';
 import ImageSlider from '../../utils/ImageSlider';
-import CheckBox from './Sections/CheckBox';
+import ContinentsRadioBox from './Sections/ContinentsRadioBox';
 import RadioBox from './Sections/RadioBox';
 import { continents, year } from './Sections/Datas';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -175,8 +175,8 @@ function LandingPage() {
                         </Col>
 
 
-                        <Col lg={10} s={8} xs={12} style={{ marginLeft: "auto", float: "left" }} >
-                            <CheckBox
+                        <Col lg={10} s={12} xs={12} style={{ marginLeft: "auto", float: "left" }} >
+                            <ContinentsRadioBox
                                 list={continents}
                                 handleFilters={filters => handleFilters(filters, "continents")}
                             />

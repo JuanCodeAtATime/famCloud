@@ -71,32 +71,44 @@ const year = [
 
 const continents = [
     {
+        "_id": 0,
+        "name": "All",
+        "array": ["All"]
+    },
+    {
         "_id": 1,
-        "name": "Africa"
+        "name": "Africa",
+        "array": ["Africa"]
     },
     {
         "_id": 2,
-        "name": "Europe"
+        "name": "Europe",
+        "array": ["Europe"]
     },
     {
         "_id": 3,
-        "name": "Asia"
+        "name": "Asia",
+        "array": ["Asia"]
     },
     {
         "_id": 4,
-        "name": "North America"
+        "name": "North America",
+        "array": ["North America"]
     },
     {
         "_id": 5,
-        "name": "South America"
+        "name": "South America",
+        "array": ["South America"]
     },
     {
         "_id": 6,
-        "name": "Australia"
+        "name": "Australia",
+        "array": ["Australia"]
     },
     {
         "_id": 7,
-        "name": "Antarctica"
+        "name": "Antarctica",
+        "array": ["Antarctica"]
     }
 ]
 
