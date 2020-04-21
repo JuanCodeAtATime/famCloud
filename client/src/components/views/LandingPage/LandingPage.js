@@ -68,7 +68,7 @@ function LandingPage() {
 
     const renderCards = Photos.map((photo, index) => {
 
-        return <Col lg={6} md={8} xs={24}>
+        return <Col lg={6} md={12} s={12} xs={12}>
             <Card
                 hoverable={true}
                 cover={<a href={`/photo/${photo._id}`} > <ImageSlider images={photo.images} /></a>}
@@ -108,6 +108,7 @@ function LandingPage() {
         console.log('array', array)
         return array
     }
+
 
     const handleFilters = (filters, category) => {
 
@@ -162,26 +163,27 @@ function LandingPage() {
                     alignContent: 'center'
 
                 }}>
-                    <Row gutter={[13]} style={{ padding: "5px" }} className={"clearfix"}>
-                        <Col lg={2} xs={1} style={{ marginRight: ".075px", marginLeft: "1.0rem" }} >
+                    <Row gutter={[0]} style={{ padding: "5px" }} className={"clearfix"}>
+                        <Col lg={2} xs={1} style={{ marginRight: "1.5px", marginLeft: "1.0rem" }} >
                             <SearchOutlined style={{
                                 fontSize: "3.0rem",
                                 float: "right",
                                 fontWeight: 'bold',
-                                color: '#fff',
-                                marginTop: ".15rem"
+                                marginRight: "1px",
+                                color: '#fff'
+
 
                             }} />
                         </Col>
 
 
-                        <Col lg={10} s={12} xs={12} style={{ marginLeft: "auto", float: "left" }} >
+                        <Col lg={10} s={11} xs={10} style={{ marginLeft: "1px", float: "left" }} >
                             <ContinentsRadioBox
                                 list={continents}
                                 handleFilters={filters => handleFilters(filters, "continents")}
                             />
                         </Col>
-                        <Col lg={10} s={8} xs={8} style={{ marginRight: "auto", float: "left" }} >
+                        <Col lg={10} s={11} xs={10} style={{ marginRight: "auto", float: "left" }} >
                             <RadioBox
                                 list={year}
                                 handleFilters={filters => handleFilters(filters, "year")}
@@ -191,7 +193,7 @@ function LandingPage() {
                 </div>
             </div>
 
-            <div style={{ width: '75%', margin: '3rem auto', marginTop: "90px" }}>
+            <div style={{ width: '80%', margin: '3rem auto', marginTop: "90px" }}>
 
 
                 {/* Filter  */}
