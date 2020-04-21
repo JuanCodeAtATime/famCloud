@@ -81,6 +81,8 @@
 @media (max-width: 767px) {
   .menu__mobile-button {
     display: inline-block !important;
+    margin-right: 5px !important;
+    padding-right: 5px !important;
   }
 
   .menu_left,

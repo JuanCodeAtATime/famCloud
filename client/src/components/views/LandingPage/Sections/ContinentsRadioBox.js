@@ -5,7 +5,7 @@ const { Panel } = Collapse;
 
 function ContinentsRadioBox(props) {
 
-    const [Value, setValue] = useState("0")
+    const [Value, setValue] = useState([])
 
     const renderRadioBox = () => (
         props.list && props.list.map((value) => (

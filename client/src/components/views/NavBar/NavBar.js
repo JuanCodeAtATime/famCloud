@@ -22,7 +22,8 @@ function NavBar() {
         <div className="menu__logo ml-auto d-none d-lg-none" style={{ display: "inline-block" }}>
           <a href="/">
             <b style={{
-              padding: "5px"
+              padding: "5px",
+              marginLeft: "5px"
             }}>fam<span style={{ color: "white" }}>cloud</span></b>
           </a>
         </div>
