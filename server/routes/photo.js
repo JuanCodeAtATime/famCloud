@@ -2,71 +2,24 @@ const express = require('express');
 const router = express.Router();
 const { Photo } = require("../models/Photo");
 const multer = require('multer');
-const app = express();
-const path = require('path');
+
 const { auth } = require("../middleware/auth");
 
-
-
-
-if (process.env.NODE_ENV === 'production') {
-    var storage = multer.diskStorage({
-        destination: function (req, file, cb) {
-            cb(null, path.resolve(__dirname, 'build'))
-        },
-        filename: (req, file, cb) => {
-            cb(null, `${Date.now()}_${file.originalname}`)
-        },
-        fileFilter: (req, file, cb) => {
-            const ext = path.extname(file.originalname)
-            if (ext !== '.jpg' || ext !== '.png' || ext !== '.gif') {
-                return cb(res.status(400).end('only jpg, png are allowed'), false);
-            }
-            cb(null, true)
+var storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, './uploads')
+    },
+    filename: (req, file, cb) => {
+        cb(null, `${Date.now()}_${file.originalname}`)
+    },
+    fileFilter: (req, file, cb) => {
+        const ext = path.extname(file.originalname)
+        if (ext !== '.jpg' || ext !== '.png' || ext !== '.gif') {
+            return cb(res.status(400).end('only jpg, png are allowed'), false);
         }
-    })
-} else {
-    var storage = multer.diskStorage({
-        destination: function (req, file, cb) {
-            cb(null, path.resolve(__dirname, 'uploads/'))
-        },
-        filename: (req, file, cb) => {
-            cb(null, `${Date.now()}_${file.originalname}`)
-        },
-        fileFilter: (req, file, cb) => {
-            const ext = path.extname(file.originalname)
-            if (ext !== '.jpg' || ext !== '.png' || ext !== '.gif') {
-                return cb(res.status(400).end('only jpg, png are allowed'), false);
-            }
-            cb(null, true)
-        }
-    })
-}
-
-const uploads = multer({ storage: storage });
-
-app.use(uploads.any());
-if (process.env.NODE_ENV === 'production') {
-    app.use(express.static(path.resolve(__dirname, 'build')));
-} else {
-    app.use(express.static('./public'));
-}
-
-// var storage = multer.diskStorage({
-//     destination: (req, file, cb) => {
-//         cb(null, 'uploads/')
-//     },
-//     filename: (req, file, cb) => {
-//         cb(null, `${Date.now()}_${file.originalname}`)
-//     },
-//     fileFilter: (req, file, cb) => {
-//         const ext = path.extname(file.originalname)
-//         if (ext !== '.jpg' || ext !== '.png' || ext !== '.gif') {
-//             return cb(res.status(400).end('only jpg, png are allowed'), false);
-//         }
-//         cb(null, true)
-//     }
-// })
+        cb(null, true)
+    }
+})
 
 var upload = multer({ storage: storage }).single("file")
 
