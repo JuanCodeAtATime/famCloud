@@ -1,11 +1,12 @@
 @import '~antd/dist/antd.css';
 
 .menu {
-  padding: 10 25 10 25px; 
+  padding: 10 10 10 10px; 
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.90);
-  color:#1890ff !important;
+  color:#1890ff !important; 
   font-weight: bold !important; 
+  max-height: 75px;
 }
 
 .ant-menu, .ant-menu-light, .ant-menu-root, .ant-menu-horizontal {
@@ -13,31 +14,25 @@
   color:#1890ff !important;
 }
 
+.logoMenuItem {
+  display: none;
+}
+
 
 .leftMenu, .rightMenu { background-color: transparent;  color:#1890ff !important; }
 
-
-
-.menu__logo a {
-  font-size: 1.5rem;
-  padding:  auto;
-  display: block;
-  margin-bottom: 0;
-  padding-bottom: 0;
-  padding-top: 10px;
-}
 
 .menu__container .ant-menu-item {
   padding: 0px 5px;
 }
 
 .menu__container .ant-menu-submenu-title {
-  padding: 10px 20px;
+  padding: 10px 10px;
 }
 
 .menu__container .ant-menu-item a,
 .menu__container .ant-menu-submenu-title a {
-  padding: 10px 15px;
+  padding: 10px 10px;
   color:#1890ff !important;
 }
 
@@ -55,9 +50,9 @@
 
 .menu__mobile-button {
   float: right;
-  height: 32px;
+  height: 35px;
   padding: 6px;
-  margin: 5px 5px 5px auto;  
+  margin: 10px 5px 5px auto;  
   display: none !important; /* use of important to overwrite ant-btn */
   background-color: rgba(24,144,255, 0.75);
   border: solid white 0.5px !important;
@@ -83,21 +78,16 @@
     display: inline-block !important;
     margin-right: 5px !important;
     padding-right: 5px !important;
+    margin-top: 20px;
   }
-
-  .menu_left,
+ 
   .menu_rigth {
     display: none;
-  }
-
- 
+  } 
 
   .menu__container .ant-menu-item,
   .menu__container .ant-menu-submenu-title {
-    padding: 1px 20px;
+    padding: 5px 5px;
   }
-
-  .menu__logo a {
-    padding: 2px;
-  }
+ 
 }

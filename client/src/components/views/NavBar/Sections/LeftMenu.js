@@ -1,5 +1,6 @@
 import React from 'react';
 import { Menu } from 'antd';
+// import { HomeOutlined } from '@ant-design/icons';
 
 // const SubMenu = Menu.SubMenu;
 // const MenuItemGroup = Menu.ItemGroup;
@@ -7,17 +8,25 @@ import { Menu } from 'antd';
 function LeftMenu(props) {
   return (
     <Menu mode={props.mode} className="leftMenu">
-      {/* <Menu.Item key="mail">
-
+      <Menu.Item key="mail">
         <a href="/">
-          <HomeOutlined style={{
-            fontSize: "1.3rem",
-            fontWeight: 'bold',
-            color: '#1890ff'
-          }} />
-          Home
+          {/* <HomeOutlined
+            className="logoMenuItem"
+            style={{
+              fontSize: "1.2rem",
+              marginBottom: 3,
+              color: '#1890ff',
+              display: 'none'
+            }} /> */}
+          <b style={{
+            marginLeft: "1px",
+            fontSize: "1.5rem"
+          }}>fam<span style={{
+            color: "white", WebkitTextStrokeColor: "black",
+            WebkitTextStrokeWidth: "0.5px"
+          }}>cloud</span></b>
         </a>
-      </Menu.Item> */}
+      </Menu.Item>
       {/* <SubMenu title={<span>Blogs</span>}>
         <MenuItemGroup title="Item 1">
           <Menu.Item key="setting:1">Option 1</Menu.Item>
