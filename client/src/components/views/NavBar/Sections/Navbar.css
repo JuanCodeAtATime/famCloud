@@ -1,8 +1,8 @@
 @import '~antd/dist/antd.css';
 
 .menu {
-  padding: 0 20 10 20px; 
-  overflow: auto;
+  padding: 10 25 10 25px; 
+  overflow: hidden;
   background-color: rgba(0, 0, 0, 0.90);
   color:#1890ff !important;
   font-weight: bold !important; 

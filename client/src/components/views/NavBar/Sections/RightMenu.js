@@ -44,9 +44,6 @@ function RightMenu(props) {
               marginBottom: 3,
               color: '#1890ff'
             }} />
-
-
-
             Signup</a>
         </Menu.Item>
       </Menu>
@@ -66,8 +63,6 @@ function RightMenu(props) {
             Upload
           </a>
         </Menu.Item>
-
-
         <Menu.Item key="logout" >
           <a onClick={logoutHandler}>
             <FontAwesomeIcon
@@ -76,8 +71,6 @@ function RightMenu(props) {
             />
             {'\u00A0'}
              Logout
-
-
           </a>
         </Menu.Item>
       </Menu>
