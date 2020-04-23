@@ -94,12 +94,13 @@ function UploadPhoto(props) {
         }}>
             <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
                 <Title level={2}> Upload New Photo</Title>
+                <FileUpload refreshFunction={updateImages} />
             </div>
 
 
-            <Form onSubmit={onSubmit}>
-                {/* DropZone */}
-                <FileUpload refreshFunction={updateImages} />
+            {/* <Form onSubmit={onSubmit}> */}
+            {/* DropZone */}
+            {/* <FileUpload refreshFunction={updateImages} />
                 <br />
                 <br />
                 <label>Country </label>
@@ -134,7 +135,7 @@ function UploadPhoto(props) {
                     Submit
                 </Button>
 
-            </Form>
+            </Form> */}
 
         </div>
     )
