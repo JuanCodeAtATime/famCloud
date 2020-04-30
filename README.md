@@ -9,9 +9,9 @@
 *****
 
 ### Overview
-**famcloud** is a full-stack MERN app featuring a travel-themed user interface and Dropzone for photo storage. 
+**famcloud** is a full-stack MERN app featuring a travel-themed user interface with Dropzone and Multer for photo uploading. 
 
-Users can take photos and store them by continent, country, and year.  The landing page displays the photo gallery where users can view and search for photos by continent and year.  
+Users can take photos and store them by continent, country, and year.  The landing page displays the photo gallery where users can view and search photos by continent and year.  
 
 ## Installation Steps
 1. Git clone with HTTPS to your local machine ```https://github.com/JuanCodeAtATime/famCloud.git```.
@@ -25,7 +25,7 @@ Users can take photos and store them by continent, country, and year.  The landi
 * **Programming Language:** JavaScript 
 * **Runtime Evironment/Sever:**  Node.js
 * **DBMS:**  Mongo DB / Mongoose
-* **Libraries/Frameworks Used:** [React-Bootstrap](https://react-bootstrap.github.io/), [Ant Design](https://ant.design/), [Drop-Zone](https://react-dropzone.js.org/)
+* **Libraries/Frameworks Used:** [React-Bootstrap](https://react-bootstrap.github.io/), [Ant Design](https://ant.design/), [Drop-Zone](https://react-dropzone.js.org/), [Multer](https://www.npmjs.com/package/multer)
 
 
 
