@@ -24,13 +24,14 @@ Users can take photos and store them by continent, country, and year.  The landi
 ### Built With
 * **Programming Language:** JavaScript 
 * **Runtime Evironment/Sever:**  [Node.js](https://nodejs.org/en/)
-* **DBMS:**  Mongo DB / Mongoose
+* **DBMS:**  [Mongo DB](https://www.mongodb.com/)
 * **Libraries/Frameworks Used:** [React-Bootstrap](https://react-bootstrap.github.io/), [Ant Design](https://ant.design/), [Drop-Zone](https://react-dropzone.js.org/), [Multer](https://www.npmjs.com/package/multer)
 
 
 
 ### Issues (Developer's Notes)
-This app has no issues when running locally.  However, photo rendering and storage functionality is intermittenly throwing "Failed to load resource: net::ERR_CONNECTION_REFUSE" on some devices on the Heroku deployed site.  I'm currently working to resolve this issue with AWS S3 solution.  Until this is resolved, a local ```uploads/``` folder is used to handle photo storage. 
+This app has no issues when running locally.  However, photo rendering and storage functionality is intermittenly throwing this error in the console when viewed on deployed Heroku site:  "Failed to load resource: net::ERR_CONNECTION_REFUSE".
+A cloud solution such as AWS S3 would probably fix this issue.  Until then, a local ```uploads/``` folder can be used to handle photo storage. 
 
 *****
 
