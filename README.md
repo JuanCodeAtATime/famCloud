@@ -25,7 +25,8 @@ Users can take photos and store them by continent, country, and year.  The landi
 * **Programming Language:** JavaScript 
 * **Runtime Evironment/Sever:**  Node.js
 * **DBMS:**  Mongo DB / Mongoose
-* **Libraries/Frameworks Used:** React-Bootstrap, Ant Design, Drop-Zone
+* **Libraries/Frameworks Used:** [React-Bootstrap](https://react-bootstrap.github.io/), [Ant Design](https://ant.design/), [Drop-Zone](https://react-dropzone.js.org/)
+
 
 
 ### Issues (Developer's Notes)
