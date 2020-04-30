@@ -30,7 +30,7 @@ Users can take photos and store them by continent, country, and year.  The landi
 
 
 ### Issues (Developer's Notes)
-This app has no issues when running locally.  However, photo rendering and storage functionality is intermittenly throwing "Failed to load resource: net::ERR_CONNECTION_REFUSE" on some devices on the Heroku deployed site.  I'm currently working to resolve this issue with AWS S3 solution.  Until this is resolved, a local uploads folder is used to handle photo storage. 
+This app has no issues when running locally.  However, photo rendering and storage functionality is intermittenly throwing "Failed to load resource: net::ERR_CONNECTION_REFUSE" on some devices on the Heroku deployed site.  I'm currently working to resolve this issue with AWS S3 solution.  Until this is resolved, a local ```uploads/``` folder is used to handle photo storage. 
 
 *****
 
