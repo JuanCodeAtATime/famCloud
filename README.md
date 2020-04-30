@@ -14,10 +14,10 @@
 Users can take photos and store them by continent, country, and year.  The landing page displays the photo gallery where users can view and search for photos by continent and year.  
 
 ## Installation Steps
-1. Git clone with HTTPS to your local machine ```https://github.com/JuanCodeAtATime/famCloud.git```
-2. In famcloud folder, run ```npm install``` to install back-end dependencies  
-3. Then,  ```cd client``` then run ```npm install``` to install front-end dependencies  
-4. Go back to root directory (famcloud) by running ``` cd .. ```
+1. Git clone with HTTPS to your local machine ```https://github.com/JuanCodeAtATime/famCloud.git```.
+2. In famcloud folder, run ```npm install``` to install back-end dependencies.  
+3. Then,  ```cd client``` then run ```npm install``` to install front-end dependencies.  
+4. Go back to root directory (famcloud) by running ``` cd .. ```.
 5. Lastly, run ```npm run dev``` to launch in your local machine.
 
 
