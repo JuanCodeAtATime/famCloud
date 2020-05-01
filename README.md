@@ -37,7 +37,7 @@ A cloud solution such as AWS S3 would probably fix this issue.  Until then, a lo
 ### Demo
 [Click here](https://drive.google.com/file/d/1cGWH729yXS-lRFQDg0dU3AmFRmAsJUiU/view) for a demo of the app's basic functionality and responsiveness.  
 
-### Check Out the Deployed Site
-https://famcloud.herokuapp.com
+### Deployed Site
+[Click here](https://famcloud.herokuapp.com) to visit deployed site.
 
 
