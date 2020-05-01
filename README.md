@@ -16,7 +16,7 @@ Users can take photos and store them by continent, country, and year.  The landi
 ## Installation Steps
 1. Git clone with HTTPS to your local machine ```https://github.com/JuanCodeAtATime/famCloud.git```.
 2. In famcloud folder, run ```npm install``` to install back-end dependencies.  
-3. Then,  ```cd client``` then run ```npm install``` to install front-end dependencies.  
+3. Then,  ```cd client``` and run ```npm install``` to install front-end dependencies.  
 4. Go back to root directory (famcloud) by running ``` cd .. ```.
 5. Lastly, run ```npm run dev``` to launch in your local machine.
 
@@ -29,9 +29,9 @@ Users can take photos and store them by continent, country, and year.  The landi
 
 
 
-### Issues (Developer's Notes)
-This app has no issues when running locally.  However, photo rendering and storage functionality is intermittenly throwing this error in the console when viewed on deployed Heroku site:  "Failed to load resource: net::ERR_CONNECTION_REFUSE".
-A cloud solution such as AWS S3 would probably fix this issue.  Until then, a local ```uploads/``` folder can be used to handle photo storage. 
+### Future Updates
+This app has no issues when running locally.  However, on deployed Heroku site, photo rendering and storage functionality is intermittenly throwing this error in the console:  ```"Failed to load resource: net::ERR_CONNECTION_REFUSE".```
+A cloud solution such as AWS S3 would probably fix this issue.  Until then, a local ```uploads/``` folder suffices as a temporary solution to store and render images. 
 
 *****
 
