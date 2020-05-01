@@ -33,7 +33,9 @@ Users can take photos and store them by continent, country, and year.  The landi
 This app has no issues when running locally.  However, on deployed Heroku site, photo rendering and storage functionality is intermittenly throwing this error in the console:  ```"Failed to load resource: net::ERR_CONNECTION_REFUSE".```
 A cloud solution such as AWS S3 would probably fix this issue.  Until then, a local ```uploads/``` folder suffices as a temporary solution to store and render images. 
 
-*****
+
+### Demo
+[Click here](https://drive.google.com/file/d/1cGWH729yXS-lRFQDg0dU3AmFRmAsJUiU/view) for a demo of the app's basic functionality and responsiveness.  
 
 ### Check Out the Deployed Site
 https://famcloud.herokuapp.com
