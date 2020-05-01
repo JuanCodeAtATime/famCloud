@@ -8,12 +8,10 @@
 
 *****
 
-## Overview
-**famcloud** is a full-stack MERN app featuring a travel-themed user interface with Dropzone and Multer for photo uploading. 
+### Overview
+**famcloud** is a full-stack MERN application featuring a travel-themed user interface with Dropzone and Multer for photo uploading.  Users can take photos and store them by continent, country, and year.  Uploading and saving photo details is simplified with an auto-complete list of all countries.  The landing page displays the photo gallery where users can view and search photos by continent and year.  
 
-Users can take photos and store them by continent, country, and year.  The landing page displays the photo gallery where users can view and search photos by continent and year.  
-
-## Installation Steps
+### Installation Steps
 1. Git clone with HTTPS to your local machine ```https://github.com/JuanCodeAtATime/famCloud.git```.
 2. In famcloud folder, run ```npm install``` to install back-end dependencies.  
 3. Then,  ```cd client``` and run ```npm install``` to install front-end dependencies.  
