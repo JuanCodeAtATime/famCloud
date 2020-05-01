@@ -8,7 +8,7 @@
 
 *****
 
-### Overview
+## Overview
 **famcloud** is a full-stack MERN app featuring a travel-themed user interface with Dropzone and Multer for photo uploading. 
 
 Users can take photos and store them by continent, country, and year.  The landing page displays the photo gallery where users can view and search photos by continent and year.  
